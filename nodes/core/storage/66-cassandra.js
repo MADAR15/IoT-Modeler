@@ -17,8 +17,6 @@
 module.exports = function(RED) {
     "use strict";
     var cassandra = require('cassandra-driver');
-	var mongo = require('mongodb');
-    var MongoClient = mongo.MongoClient;
 	var CassandraClient = new cassandra.Client({contactPoints: ['127.0.0.1'], keyspace: 'test'});
 
     function CassandraNode(n) {
